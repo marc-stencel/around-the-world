@@ -1,0 +1,12 @@
+@use '../utilities/variables' as *;
+
+.footer {
+  background-color: $bg-color-primary;
+  margin-top: auto;
+  &__text {
+    color: $color-secondary;
+    font-size: 18px;
+    padding: 10px 0;
+    text-align: center;
+  }
+}

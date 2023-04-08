@@ -1,0 +1,27 @@
+@use '../utilities/variables' as *;
+
+.body {
+  &__background {
+    background: $bg-color-tertiary;
+    background-image: url('../img/map-sm.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .body__background {
+    background-image: url('../img/map-md.jpeg');
+  }
+}

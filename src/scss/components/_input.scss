@@ -1,0 +1,25 @@
+@use '../utilities/variables' as *;
+
+.input {
+  background-color: $bg-color-primary-variant;
+  border: 1px solid $color-secondary;
+  border-radius: $bd-radius-primary;
+  color: $color-primary;
+  display: block;
+  margin: 15px auto;
+  padding: 8px 16px;
+  &::placeholder,
+  &:placeholder-shown {
+    color: $color-secondary;
+  }
+  &:focus,
+  &:focus-visible {
+    outline: 3px solid $color-secondary;
+  }
+}
+
+@media (min-width: 992px) {
+  .input {
+    font-size: 16px;
+  }
+}

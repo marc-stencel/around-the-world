@@ -1,0 +1,22 @@
+{
+  "name": "around-the-world",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite src",
+    "build": "vite build src",
+    "preview": "vite preview"
+  },
+  "author": "Marcin Stencel",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "8.2.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-prettier": "4.2.1",
+    "sass": "1.59.3",
+    "vite": "4.2.1"
+  }
+}

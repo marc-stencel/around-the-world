@@ -1,0 +1,41 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.undo {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  &__link {
+    @include transition;
+    background-color: $bg-color-quaternary;
+    border-radius: $bd-radius-quaternary;
+    cursor: pointer;
+    height: $a-size-primary;
+    text-align: center;
+    width: $a-size-primary;
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      background-color: $bg-color-tertiary;
+      color: $color-tertiary;
+    }
+  }
+  &__text {
+    font-size: calc($a-size-primary / 2);
+    line-height: $a-size-primary;
+  }
+}
+
+@media (min-width: 992px) {
+  .undo {
+    &__text {
+      font-size: calc($a-size-secondary / 2);
+      line-height: $a-size-secondary;
+    }
+    &__link {
+      height: $a-size-secondary;
+      width: $a-size-secondary;
+    }
+  }
+}

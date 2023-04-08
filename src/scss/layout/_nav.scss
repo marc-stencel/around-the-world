@@ -1,0 +1,43 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.filters {
+  background-color: $bg-color-primary-variant-3;
+  display: none;
+  &--active {
+    display: block;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    @include transition;
+    background-color: $bg-color-secondary-variant;
+    border: 1px solid $color-primary;
+    border-radius: $bd-radius-primary;
+    box-shadow: 2px 3px 4px 0 $bs-color-primary;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 6px;
+    padding: 6px 0px;
+    text-align: center;
+    width: 70px;
+    &--active,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      background-color: $bg-color-tertiary-variant;
+      color: $bg-color-primary-variant-2;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .filters__item {
+    font-size: 20px;
+    margin: 10px 16px;
+    width: 100px;
+  }
+}
